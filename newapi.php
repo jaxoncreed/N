@@ -47,8 +47,8 @@ require("header.inc.php");
             $text = "var scripts = ".$json."exports.scripts = scripts";
             $handle = fopen($jFile, 'wb');
             fwrite($handle, $text);
-            //header("Location: ./control.php");
-            //exit;
+            header("Location: ./control.php");
+            exit;
         }
     }
 ?>

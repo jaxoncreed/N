@@ -97,4 +97,5 @@
         <?php
         // put your code here
         ?>
+        <div class="background"></div>
         <div class="content">
