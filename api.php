@@ -1,7 +1,9 @@
 <?php
 require("header.inc.php");
 
-print("Here we will put information on how you can add this to your project");
+if (isLoggedIn()) {
+    print("<h1>Add this API to your project.</h1>");
+}
 
 require("footer.inc.php");
 ?>
