@@ -4,7 +4,7 @@
     $dbDatabase = "n";
     $dbHost = "localhost";
     
-    $dbConn = mysql_connect($dbHost, $dbUser, $dbPass) || die("I'm annoyed");
+    $dbConn = mysql_connect($dbHost, $dbUser, $dbPass);
     
     if ($dbConn) {
         mysql_select_db($dbDatabase);
