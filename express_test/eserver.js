@@ -19,7 +19,7 @@ var wrek = require('./wrek');
     return parseInt(d);
 });*/
 
-app.get('/wrek/:id?/:meow?', wrek.handle );
+app.get('/wrek/:id?', wrek.handle );
 
 console.log(app.routes);
 
