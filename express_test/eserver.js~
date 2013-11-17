@@ -44,7 +44,7 @@ app.get('/wrek', function(req, res){
 });
 
 
-app.param('user', function(req, res, next, id){
+/*app.param('user', function(req, res, next, id){
   User.find(id, function(err, user){
     if (err) {
       next(err);
@@ -55,7 +55,7 @@ app.param('user', function(req, res, next, id){
       next(new Error('failed to load user'));
     }
   });
-});
+});*/
 
 
 

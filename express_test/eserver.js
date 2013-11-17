@@ -40,7 +40,7 @@ var wrek = require('./wrek');
 
 app.get('/wrek', function(req, res){
   console.log("request received");
-  res.send( wrek.run() );
+  res.send( wrek.run().stdout );
 });
 
 

@@ -9,7 +9,30 @@ require 'json/pure'
 url = "http://www.wrek.org/playlist/"
 plays = []      #a set of hashes
 
+
+#date
+
+date = nil
+
+if ARGV.first then
+    p ARGV.first
+    begin
+        date = Date.parse(p)
+    rescue
+        date = Date.today
+    end
+end
+
+if (date.nil? or date < Date.today - 365*20) then
+#don't bother with days more than 20 years ago
+    date = Date.today
+end
+
+p date.to_s
+
+
 page = Nokogiri::HTML (open(url))
+#page = nil
 
 #find the table with id=playlist, then for each tr tag,
 #   grab each child node one at a time and store it to
@@ -35,4 +58,7 @@ plays = plays[1..-1]
 #    p.each {|key,value| puts "\t#{key}:\t\t#{value}"}
 #end
 
-p plays
+out = {}
+out.date = date
+out.data = plays
+p out.to_json
