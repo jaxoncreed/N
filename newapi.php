@@ -41,7 +41,7 @@ require("header.inc.php");
             }
             array_push($apis, $id);
             mysql_query("UPDATE `users` SET `apis` = '".json_encode($apis)."' WHERE `id` = '".  isLoggedIn()."'");
-            print(shell_exec("sh /home/ubuntu/AWS.sh ".$git." ".$name));
+            system("/home/ubuntu/AWS.sh ".$git." ".$name);
             mkdir("/home/ubuntu/".$name, 0777);
             $jFile = "/home/ubuntu/".$name."/config.js";
             $text = "var scripts = ".$json."exports.scripts = scripts";
