@@ -15,14 +15,7 @@
             return false;
         }
     }
-    
-    function getUser() {
-        $user = isLoggedIn();
-        if ($user) {
-            $query = mysql_query("SELECT `email`, `name` FROM `users` WHERE `id` ='".(int) $user."'");
-            return mysql_fetch_assoc($query);
-        }
-    }
+
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +32,21 @@
             <div class="NRightLine"></div>
             <div class="NInfLeft"></div>
             <div class="NInfRight"></div>
+            <div class="version">so pre-alpha it will knock your socks off!</div>
         </div>
         <div class="header">
-            <span style="position: absolute; right: 5px; bottom: 5px;">
+            <span style="position: absolute; left: 200px; bottom: 40px;">
+                <table style="width:250px; text-align:center;"><tr>
+                    <td><a href="index.php">Home</a></td>
+                    <?php
+                        if (isLoggedIn()) {
+                            print("<td><a href=\"control.php\">Your Account</a></td>");
+                        }
+                    ?>
+                    <td><a href="search.php">Search </a></td>
+                </tr></table>
+            </span>    
+            <span style="position: absolute; right: 5px; bottom: 40px;">
                 <form id="logoutForm" method="post" action="">
                     <?php
                         if (isLoggedIn()) {
@@ -71,7 +76,7 @@
                                         $userData = mysql_fetch_assoc($query);
                                         $expires = time() + (60 * 60);
                                         mysql_query("INSERT INTO `active_users` (`users`, `session_id`, `hash`, `expires`) VALUES ('".$userData['id']."', '".$sessID."', '".$hash."', '".$expires."')");
-                                        header("Location: ".$_SERVER['REQUEST_URI']);
+                                        header("Location: control.php");
                                     }
                                     else {
                                         print("Error: Email and/or Password were incorrect.");
