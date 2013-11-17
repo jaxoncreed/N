@@ -13,10 +13,17 @@ body {
     top: 0px;
     width: 100%;
     height: 100px;
-    background-color: #000099;
+    background-color: #007777;
     z-index: 4;
     color: white;
 }
+.header a:link {
+    color: white;
+}
+.header a:visited {
+    color: white;
+}
+
 .content {
     position: absolute;
     top: 100px;
@@ -37,18 +44,6 @@ body {
     padding: 5px;
 }
 
-.createUser {
-    position: relative;
-    width: 500px;
-    height: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    border: 1px solid;
-    padding: 5px;
-    overflow: scroll;
-}
-
-
 
 /*Style for the Letter N */
 .NContainer {
@@ -66,7 +61,7 @@ body {
     left: 0px;
     top: 50px;
     height: 150px;
-    background-color: red;
+    background-color: #00EEEE;
 }
 
 .NRightLine {
@@ -75,7 +70,7 @@ body {
     right: 0px;
     top: 50px;
     height: 150px;
-    background-color: red;
+    background-color: #00EEEE;
 }
 
 .NDiagonal {
@@ -84,7 +79,7 @@ body {
     width: 30px;
     top: 50px;
     left: 60px;
-    background-color: red;
+    background-color: #00EEEE;
     
     transform: skew(37deg); 
     -o-transform: skew(40deg); 
@@ -108,5 +103,13 @@ body {
     right: 0px;
     top: 0px;
     height: 50px;
-    background-color: #BBBBBB;
+    background-color: #DDDDDD;
+}
+
+.version {
+    position: absolute;
+    text-align: center;
+    color: red;
+    top: 200px;
+    width: 150px;
 }

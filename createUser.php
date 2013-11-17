@@ -33,23 +33,23 @@
         }
     }
 ?>
-    <div class="createUser">
-        <h1>Create Your Account</h1>
-        <form id="createUserForm" method="post" action="">
-            <h2>Username</h2>
-            <input type="text" name="username" id="realname" />
-            <h2>Name:</h2>
-            <input type="text" name="realname" id="realname" />
-            <h2>Password:</h2>
-            <input type="password" name="password1" id="password1" />
-            <h2>Confirm Password:</h2>
-            <input type="password" name="password2" id="password2" />
-            <h2>Email:</h2>
-            <input type="text" name="email" id="email" />
-            <br /><br />
-            <button type="submit" name="createButton" id="createButton">Create Your Account</button>
-        </form>
-    </div> 
+
+<h1>Create Your Account</h1>
+<form id="createUserForm" metshod="post" action="">
+    <h2>Username</h2>
+    <input type="text" name="username" id="realname" />
+    <h2>Name:</h2>
+    <input type="text" name="realname" id="realname" />
+    <h2>Password:</h2>
+    <input type="password" name="password1" id="password1" />
+    <h2>Confirm Password:</h2>
+    <input type="password" name="password2" id="password2" />
+    <h2>Email:</h2>
+    <input type="text" name="email" id="email" />
+    <br /><br />
+    <button type="submit" name="createButton" id="createButton">Create Your Account</button>
+</form>
+
 <?php
     include("footer.inc.php");
 ?>

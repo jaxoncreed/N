@@ -1,10 +1,7 @@
 <?php
     require("header.inc.php");
-    if (isLoggedIn()) {
-        print("<p>Hello World!</p>");
-    }
-    else {
-        print("<p>Goodbye World!</p>");
-    }
+    
+    print("This would probably look good eventually to give a nice first impression.");
+    
     include("footer.inc.php");
 ?>
