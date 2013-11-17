@@ -41,6 +41,12 @@ require("header.inc.php");
             }
             array_push($apis, $id);
             mysql_query("UPDATE `users` SET `apis` = '".json_encode($apis)."' WHERE `id` = '".  isLoggedIn()."'");
+            exec('home/ubuntu/AWS.sh '.$git.' '.$name);
+            mkdir("../../../home/ubuntu/".$name);
+            $jFile = "../../../home/ubuntu/".$name."/config.js";
+            $text = "var scripts = ".$json."exports.scripts = scripts";
+            $handle = fopen($jFile, 'wb');
+            fwrite($handle, $text);
             header("Location: ./control.php");
             exit;
         }
