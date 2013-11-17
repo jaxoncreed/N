@@ -1,0 +1,112 @@
+root { 
+    display: block;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: #000099;
+    z-index: 4;
+    color: white;
+}
+.content {
+    position: absolute;
+    top: 100px;
+    bottom: 0px;
+    left: 200px;
+    right: 200px;
+    
+}
+
+.Login {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 50px;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.createUser {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid;
+    padding: 5px;
+    overflow: scroll;
+}
+
+
+
+/*Style for the Letter N */
+.NContainer {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 10px;
+    width: 150px;
+    z-index: 5;
+}
+
+.NLeftLine {
+    position: absolute;
+    width: 30px;
+    left: 0px;
+    top: 50px;
+    height: 150px;
+    background-color: red;
+}
+
+.NRightLine {
+    position: absolute;
+    width: 30px;
+    right: 0px;
+    top: 50px;
+    height: 150px;
+    background-color: red;
+}
+
+.NDiagonal {
+    position: absolute;
+    height: 150px;
+    width: 30px;
+    top: 50px;
+    left: 60px;
+    background-color: red;
+    
+    transform: skew(37deg); 
+    -o-transform: skew(40deg); 
+    -moz-transform: skew(40deg); 
+    -ms-transform: skew(40deg);
+    -webkit-transform: skew(38deg);
+}
+
+.NInfLeft {
+    position: absolute;
+    width: 30px;
+    left: 0px;
+    top: 200px;
+    bottom: 0px;
+    background-color: #DDDDDD;
+}
+
+.NInfRight {
+    position: absolute;
+    width: 30px;
+    right: 0px;
+    top: 0px;
+    height: 50px;
+    background-color: #BBBBBB;
+}
