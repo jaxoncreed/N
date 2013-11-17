@@ -30,6 +30,7 @@ body {
     bottom: 0px;
     left: 200px;
     right: 200px;
+    z-index: 2;
     
 }
 
@@ -44,6 +45,20 @@ body {
     padding: 5px;
 }
 
+.background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url(background2.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #737373;
+    z-index: 1;
+}
 
 /*Style for the Letter N */
 .NContainer {
@@ -94,7 +109,7 @@ body {
     left: 0px;
     top: 200px;
     bottom: 0px;
-    background-color: #DDDDDD;
+    background-color: #DFDFDF;
 }
 
 .NInfRight {
@@ -103,7 +118,7 @@ body {
     right: 0px;
     top: 0px;
     height: 50px;
-    background-color: #DDDDDD;
+    background-color: #DFDFDF;
 }
 
 .version {

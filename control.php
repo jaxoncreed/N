@@ -37,7 +37,7 @@ if (isLoggedIn()) {
         print("<tr><td>");
         print("<h3><a href=\"manageapi.php?id=".$apiArr['id']."\">".$apiArr['name']."</a></h3>");
         print("</td><td>");
-        print("<form action=\"editapi.php?id=".$apiArr['id']."\" style=\"float:right;\"><input type=\"submit\" value=\"Edit this API\"></form>");
+        print("<button style=\"float:right;\" value=\"Edit this API\" onclick=\"location.href ='editapi.php?id=".$apiArr['id']."';\">Edit the API</button>");
         print("</td></tr>");
     }
     print("</table>");

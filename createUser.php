@@ -2,6 +2,7 @@
     require("header.inc.php");
     
     if (isset($_POST['createButton'])) {
+        print("thisHappened");
         $email = mysql_real_escape_string($_POST['email']);
         $pass1 = mysql_real_escape_string($_POST['password1']);
         $pass2 = mysql_real_escape_string($_POST['password2']);
@@ -35,7 +36,7 @@
 ?>
 
 <h1>Create Your Account</h1>
-<form id="createUserForm" metshod="post" action="">
+<form id="createUserForm" method="post" action="">
     <h2>Username</h2>
     <input type="text" name="username" id="realname" />
     <h2>Name:</h2>
